@@ -1,2 +1,2 @@
-[0110/123115.989:ERROR:settings.cc(325)] Settings version is not 1
-[0110/162426.808:ERROR:directory_reader_win.cc(43)] FindFirstFile: Impossibile trovare il percorso specificato. (0x3)
+[0110/200451.396:ERROR:directory_reader_win.cc(43)] FindFirstFile: Impossibile trovare il percorso specificato. (0x3)
+[0110/211054.050:ERROR:directory_reader_win.cc(43)] FindFirstFile: Impossibile trovare il percorso specificato. (0x3)
