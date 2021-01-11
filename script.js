@@ -1,16 +1,15 @@
-  window.onload = caricaDati()
-  window.setInterval(caricaDati, 1000 )
-
+  window.setInterval(caricaDati, 500 )
+  /* https://cors-anywhere.herokuapp.com/ */
   function caricaDati() {
       $.ajax({
-          url: "https://cors-anywhere.herokuapp.com/http://flight.apps.37.187.91.6.nip.io/flights",
+          url: "http://flight.apps.37.187.91.6.nip.io/flights",
           method: 'GET',
           dataType : "json",
           success: function(resp){
               if($("#corpo").html()===parsaDati(resp)){
-                  console.log("Dati sincronizzati")
+                  console.log("Dati sincronizzati!")
               }else{
-                  console.log("Aggiornamento dati")
+                  console.log("Aggiornamento dati...")
                   $("#corpo").html(parsaDati(resp))
             }
             }, 
@@ -41,9 +40,11 @@
 
   function cancel(id) {
       $.ajax({
-          url: `https://cors-anywhere.herokuapp.com/http://flight.apps.37.187.91.6.nip.io/flights/${id}/cancel`,
+          url: `http://flight.apps.37.187.91.6.nip.io/flights/${id}/cancel`,
           method: 'PUT',
-          success: function() {console.log(`Cancellato volo:${id}`)},
+          success: function() {
+            console.log(`Cancellato volo:${id}`)
+            },
           error: function(err){console.error(err)},
       });
   }
